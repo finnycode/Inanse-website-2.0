@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 class="b b-1">Bruh</h1>
+    <h1 id="lmao">Hey Gus</h1>
+    <button id="cheese" onclick="buttonPress()">Click this for a cookie</button>
+    <button id="reset" onclick="reset()">Reset this godawful mess</button>
+    <br>
+    <input type="text" placeholder="type sum" name="bruh" id="inputbox">
+   
+    
+    
+    <script>
+        function buttonPress() {
+            var input_stuff = document.getElementById("inputbox").value;
+            document.getElementById("lmao").innerHTML = input_stuff;
+            document.getElementById("lmao").style.color = "orange";
+            document.getElementById("lmao").style.fontSize = "300px";
+
+        }
+
+        function reset() {
+            document.getElementById("lmao").style.fontSize = "50px";
+            document.getElementById("lmao").style.color = "black";
+            document.getElementById("lmao").innerHTML = "Hey Gus"
+        }
+
+        function getTextBox() {
+            var input_stuff = document.getElementById("inputbox").value;
+            
+        }
+     
+    </script>
+
+    <style>
+
+        body {
+            background: beige;
+        }
+        
+        #lmao {
+            font-size: 50px;
+            color: black;
+        }
+        
+        
+        .b {
+            color: orange;
+            
+        }
+        .b-1 {
+            color: red;
+        }
+
+        
+
+    </style>
+    
+</body>
+</html>
