@@ -14,10 +14,33 @@
     <button id="reset" onclick="reset()">Reset this godawful mess</button>
     <br>
     <input type="text" placeholder="type sum" name="bruh" id="inputbox">
+    <br><br><br><br><br>
+    <img src="cow.jpeg" alt="cow hehe" class="cowpic">
+
    
+    
+    <div class="rightsidecolumn">
+        
+        <input type="text" placeholder="width(px)" id="widthofme"><button id="widthbutton" onclick="widthChange()">press to adjust width</button>
+        <br>
+        <input type="text" placeholder="height(px)" id="heightofme"><button id="heightbutton" onclick="heightChange()">press to adjust height</button>
+        <h1>bruh</h1>
+        <img src="me.jpeg" alt="melol" id="me" width="300" height="300">
+
+        <h2 id="test">bruh say bruh</h2>
+
+        
+    
+    </div>
+    
+    
     
     
     <script>
+        
+       var me = document.getElementById("me"); 
+        
+        
         function buttonPress() {
             var input_stuff = document.getElementById("inputbox").value;
             document.getElementById("lmao").innerHTML = input_stuff;
@@ -30,17 +53,48 @@
             document.getElementById("lmao").style.fontSize = "50px";
             document.getElementById("lmao").style.color = "black";
             document.getElementById("lmao").innerHTML = "Hey Gus"
+            document.getElementById("me").style.width = "300px";
+            document.getElementById("me").style.height = "300px";
         }
 
-        function getTextBox() {
-            var input_stuff = document.getElementById("inputbox").value;
+        function widthChange() {
+            var widthofme = document.getElementById("widthofme").value;
+            widthofme = parseInt(widthofme);
+            me.style.width = widthofme + 'px';
             
         }
+        
+        function heightChange() {
+            var heightofme = document.getElementById("heightofme").value;
+            widthofme = parseInt(heightofme);
+            me.style.height = heightofme + 'px';
+
+        }
+
+        
+        
      
     </script>
 
     <style>
 
+        
+        #farrightdiv {
+            float: right;
+            padding-left: 500px;
+            padding-right: 600px;
+            text-align: justify;
+            
+        }
+        
+        .cowpic {
+            width: 600px;
+            height: 400px;
+            border: black;
+            border-radius: 20px;
+            
+        }
+        
         body {
             background: beige;
         }
@@ -59,7 +113,16 @@
             color: red;
         }
 
+        .rightsidecolumn {
+            float: right;
+            padding-right: 800px;
+            text-align: center;
+        }
         
+        #me {
+            width: 300px;
+            height: 300px;
+        }
 
     </style>
     
